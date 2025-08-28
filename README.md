@@ -1,10 +1,10 @@
 # Nikolas Medina – Freelance Web Developer
 
-## 📌 Project Overview
+## Project Overview
 
 This is the source code for my personal landing page. The goal of this project is to create a sleek, modern single-page application (SPA) that showcases my freelance web development services. This site will act as both a portfolio and a business landing page for potential clients.
 
-## 🎯 Goals
+## Goals
 
 - Build a professional, responsive SPA landing page.
 - Clearly communicate my freelance services (website redesigns, SEO, performance improvements, custom builds).
@@ -12,7 +12,7 @@ This is the source code for my personal landing page. The goal of this project i
 - Establish a professional online presence under my own domain.
 - Lay the groundwork for expanding into a full portfolio site with case studies and client work.
 
-## 🛠️ Tech Stack Plan
+## Tech Stack Plan
 
 - **Framework:** React (for building a fast and dynamic SPA)
 - **Styling:** TailwindCSS (for clean, modern, and responsive design)
@@ -24,7 +24,7 @@ This is the source code for my personal landing page. The goal of this project i
   - SEO optimizations (Open Graph tags, meta descriptions)
   - Blog/updates section (if needed for content marketing)
 
-## 📐 Planned Layout
+## Planned Layout
 
 The landing page will be structured as follows:
 
@@ -51,7 +51,7 @@ The landing page will be structured as follows:
 6. **Footer**
    - Minimal links + copyright.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Development
 
