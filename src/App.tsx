@@ -1,33 +1,49 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
+import React from 'react';
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import Services from './components/Services';
+// import ValueProp from './components/ValueProp'
+// import Process from './components/Process'
+import Contact from './components/Contact';
+
+const sections = [
+  { id: 'hero', component: <Hero /> },
+  { id: 'services', component: <Services /> },
+  // { id: 'why', component: <ValueProp /> },
+  // { id: 'process', component: <Process /> },
+  { id: 'contact', component: <Contact /> },
+];
+
 function App() {
-  const [count, setCount] = useState(0);
+  const [visibleSections] = useState([
+    'hero',
+    'services',
+    'why',
+    'process',
+    'contact',
+  ]);
+
+  // function toggleSection(id: string) {
+  //   setVisibleSections((prev) =>
+  //     prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id],
+  //   );
+  // }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Niko Medina - Freelance Web Developer</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        {sections
+          .filter((section) => visibleSections.includes(section.id))
+          .map((section) => (
+            <div key={section.id}>{section.component}</div>
+          ))}
+      </main>
+      <Footer />
     </>
   );
 }
